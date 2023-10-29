@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MyTaskModelStoreContainer" CdmEntityContainer="MyTaskEntities">
+    <FunctionImportMapping FunctionImportName="GetAllUsers" FunctionName="MyTaskModel.Store.GetAllUsers">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MyTaskModel.GetAllUsers_Result">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="PassWord" ColumnName="PassWord" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spdeleteUsers" FunctionName="MyTaskModel.Store.spdeleteUsers">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MyTaskModel.spdeleteUsers_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Error" ColumnName="Error" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spInsertUsers" FunctionName="MyTaskModel.Store.spInsertUsers">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MyTaskModel.spInsertUsers_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Error" ColumnName="Error" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>
